@@ -17,5 +17,10 @@ extern NSString *kWolframApiBaseURL;
 extern NSString *kWolframGeneralQueryParam;
 extern NSString *kWolframGeneralInputParam;
 extern NSString *kWolframApiIDParam;
+extern NSString *kWolframResultsFormatParam;
+
+#pragma mark - Expected datatypes
+extern NSString *kWolframImageDatatype;
+extern NSString *kWolframPlaintextDatatype;
 
 #endif

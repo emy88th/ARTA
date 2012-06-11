@@ -7,8 +7,9 @@
 //
 
 #import "ELWolframLocationAPIClient.h"
-#import "AFXMLRequestOperation.h"
+#import "AFKissXMLRequestOperation.h"
 #import "ELWolframConstants.h"
+#import "DDXMLDocument.h"
 
 @implementation ELWolframLocationAPIClient
 
@@ -26,7 +27,7 @@
     self = [super initWithBaseURL:url];
     
     if (self) {
-        [self registerHTTPOperationClass:[AFXMLRequestOperation class]];
+        [self registerHTTPOperationClass:[AFKissXMLRequestOperation class]];
         return self;
     }
     
@@ -35,26 +36,22 @@
 
 - (void)informationPodsRegardingTheLocation:(NSString *)location {
     
-    NSDictionary *paramDictionary = [NSDictionary dictionaryWithObjectsAndKeys:location, kWolframGeneralInputParam, kWolframApiID, kWolframApiIDParam, nil];
-    
-    __block id delegate = self;
+    NSDictionary *paramDictionary = [NSDictionary dictionaryWithObjectsAndKeys:location, kWolframGeneralInputParam, kWolframApiID, kWolframApiIDParam, [NSString stringWithFormat:@"%@,%@", kWolframImageDatatype, kWolframPlaintextDatatype], kWolframResultsFormatParam, nil];
     
     [self getPath:kWolframGeneralQueryParam parameters:paramDictionary 
-          success:^(AFHTTPRequestOperation *operation, id xmlParser) {
-              [(NSXMLParser *)xmlParser setDelegate:delegate];
-              [(NSXMLParser *)xmlParser parse];
+          success:^(AFHTTPRequestOperation *operation, id xmlDocument) {
+              
+              DDXMLDocument *documentToParse = (DDXMLDocument *)xmlDocument;
+              
+              NSError *error = nil;
+              NSArray *pods = [documentToParse nodesForXPath:@"/queryresult/pod" error:&error];
+              
+              NSLog(@"pods:%@",pods);
               
     } 
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }];
-}
-
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName 
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName 
-	attributes:(NSDictionary *)attributeDict {
-    
-	NSLog(@"elementName:%@, attributes:%@", elementName, attributeDict);
 }
 
 @end

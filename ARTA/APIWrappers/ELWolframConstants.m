@@ -16,3 +16,8 @@ NSString *kWolframApiBaseURL = @"http://api.wolframalpha.com/v2/";
 NSString *kWolframGeneralQueryParam = @"query";
 NSString *kWolframGeneralInputParam = @"input";
 NSString *kWolframApiIDParam = @"appid";
+NSString *kWolframResultsFormatParam = @"format";
+
+#pragma mark - Expected datatypes
+NSString *kWolframImageDatatype = @"image";
+NSString *kWolframPlaintextDatatype = @"plaintext;";
