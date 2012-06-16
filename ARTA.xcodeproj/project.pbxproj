@@ -30,7 +30,7 @@
 		E54C5F401583AA9C00ECB338 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F341583AA9C00ECB338 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E54C5F411583AA9C00ECB338 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F361583AA9C00ECB338 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E54C5F421583AA9C00ECB338 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E5ECAD5E1585202000128FB5 /* ELWolframLocationAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD5D1585202000128FB5 /* ELWolframLocationAPIClient.m */; };
+		E5ECAD5E1585202000128FB5 /* ELWolframAlphaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */; };
 		E5ECAD67158540AD00128FB5 /* ELWolframConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */; };
 		E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */; };
 /* End PBXBuildFile section */
@@ -82,8 +82,8 @@
 		E54C5F361583AA9C00ECB338 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		E54C5F371583AA9C00ECB338 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		E5ECAD5C1585202000128FB5 /* ELWolframLocationAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframLocationAPIClient.h; path = APIWrappers/ELWolframLocationAPIClient.h; sourceTree = "<group>"; };
-		E5ECAD5D1585202000128FB5 /* ELWolframLocationAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframLocationAPIClient.m; path = APIWrappers/ELWolframLocationAPIClient.m; sourceTree = "<group>"; };
+		E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ELWolframAlphaAPIClient.h; path = APIWrappers/ELWolframAlphaAPIClient.h; sourceTree = "<group>"; };
+		E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframAlphaAPIClient.m; path = APIWrappers/ELWolframAlphaAPIClient.m; sourceTree = "<group>"; };
 		E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ELWolframConstants.h; path = APIWrappers/ELWolframConstants.h; sourceTree = "<group>"; };
 		E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframConstants.m; path = APIWrappers/ELWolframConstants.m; sourceTree = "<group>"; };
 		E5ECAD6D158CD9DE00128FB5 /* ELWolframLocationDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframLocationDataModel.h; path = DataModels/ELWolframLocationDataModel.h; sourceTree = "<group>"; };
@@ -252,8 +252,8 @@
 				E5ECAD70158CD9E600128FB5 /* DataModels */,
 				E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */,
 				E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */,
-				E5ECAD5C1585202000128FB5 /* ELWolframLocationAPIClient.h */,
-				E5ECAD5D1585202000128FB5 /* ELWolframLocationAPIClient.m */,
+				E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */,
+				E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */,
 			);
 			name = WolframLocationAPIClient;
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				E54C5F401583AA9C00ECB338 /* AFURLConnectionOperation.m in Sources */,
 				E54C5F411583AA9C00ECB338 /* AFXMLRequestOperation.m in Sources */,
 				E54C5F421583AA9C00ECB338 /* UIImageView+AFNetworking.m in Sources */,
-				E5ECAD5E1585202000128FB5 /* ELWolframLocationAPIClient.m in Sources */,
+				E5ECAD5E1585202000128FB5 /* ELWolframAlphaAPIClient.m in Sources */,
 				E5ECAD67158540AD00128FB5 /* ELWolframConstants.m in Sources */,
 				CF8C93851585D471004A5F61 /* DDXMLElementAdditions.m in Sources */,
 				CF8C93861585D471004A5F61 /* NSString+DDXML.m in Sources */,

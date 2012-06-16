@@ -7,7 +7,7 @@
 //
 
 #import "ELAppDelegate.h"
-#import "ELWolframLocationAPIClient.h"
+#import "ELWolframAlphaAPIClient.h"
 
 @implementation ELAppDelegate
 
@@ -17,7 +17,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    [[ELWolframLocationAPIClient sharedClient] informationPodsRegardingTheLocation:@"Iasi" withBlock:^(NSArray *resultPods) {
+    [[ELWolframAlphaAPIClient sharedClient] informationPodsForInput:@"Iasi" withBlock:^(NSArray *resultPods) {
         if (resultPods) {
             NSArray *_resultPods = resultPods;
             
