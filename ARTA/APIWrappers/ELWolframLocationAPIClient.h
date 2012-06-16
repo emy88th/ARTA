@@ -12,6 +12,6 @@
 
 + (ELWolframLocationAPIClient *)sharedClient;
 
-- (void)informationPodsRegardingTheLocation:(NSString *)location;
+- (void)informationPodsRegardingTheLocation:(NSString *)location withBlock:(void (^)(NSArray *pods))block;
 
 @end

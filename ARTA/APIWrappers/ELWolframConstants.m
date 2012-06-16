@@ -20,4 +20,9 @@ NSString *kWolframResultsFormatParam = @"format";
 
 #pragma mark - Expected datatypes
 NSString *kWolframImageDatatype = @"image";
-NSString *kWolframPlaintextDatatype = @"plaintext;";
+NSString *kWolframPlaintextDatatype = @"plaintext";
+
+#pragma mark - Notifications
+NSString *kWolframRequestInProgressNotification = @"WolframRequestInProgressNotification";
+NSString *kWolframRequestFinishedNotification = @"WolframRequestFinishedNotification";
+NSString *kWolframRequestFailedNotification = @"WolframRequestFailedNotification";

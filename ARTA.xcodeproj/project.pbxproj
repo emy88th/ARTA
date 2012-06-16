@@ -32,6 +32,7 @@
 		E54C5F421583AA9C00ECB338 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E5ECAD5E1585202000128FB5 /* ELWolframLocationAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD5D1585202000128FB5 /* ELWolframLocationAPIClient.m */; };
 		E5ECAD67158540AD00128FB5 /* ELWolframConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */; };
+		E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		E5ECAD5D1585202000128FB5 /* ELWolframLocationAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframLocationAPIClient.m; path = APIWrappers/ELWolframLocationAPIClient.m; sourceTree = "<group>"; };
 		E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ELWolframConstants.h; path = APIWrappers/ELWolframConstants.h; sourceTree = "<group>"; };
 		E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframConstants.m; path = APIWrappers/ELWolframConstants.m; sourceTree = "<group>"; };
+		E5ECAD6D158CD9DE00128FB5 /* ELWolframLocationDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframLocationDataModel.h; path = DataModels/ELWolframLocationDataModel.h; sourceTree = "<group>"; };
+		E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframLocationDataModel.m; path = DataModels/ELWolframLocationDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,12 +249,22 @@
 		E5ECAD6515853D6600128FB5 /* WolframLocationAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				E5ECAD70158CD9E600128FB5 /* DataModels */,
 				E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */,
 				E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */,
 				E5ECAD5C1585202000128FB5 /* ELWolframLocationAPIClient.h */,
 				E5ECAD5D1585202000128FB5 /* ELWolframLocationAPIClient.m */,
 			);
 			name = WolframLocationAPIClient;
+			sourceTree = "<group>";
+		};
+		E5ECAD70158CD9E600128FB5 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				E5ECAD6D158CD9DE00128FB5 /* ELWolframLocationDataModel.h */,
+				E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */,
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +349,7 @@
 				CF8C93881585D471004A5F61 /* DDXMLElement.m in Sources */,
 				CF8C93891585D471004A5F61 /* DDXMLNode.m in Sources */,
 				CF8C93901585D832004A5F61 /* AFKissXMLRequestOperation.m in Sources */,
+				E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +385,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -394,6 +409,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -413,6 +429,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTA/ARTA-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "ARTA/ARTA-Info.plist";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +442,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTA/ARTA-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "ARTA/ARTA-Info.plist";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -17,7 +17,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    [[ELWolframLocationAPIClient sharedClient] informationPodsRegardingTheLocation:@"Iasi"];
+    [[ELWolframLocationAPIClient sharedClient] informationPodsRegardingTheLocation:@"Iasi" withBlock:^(NSArray *resultPods) {
+        if (resultPods) {
+            NSArray *_resultPods = resultPods;
+            
+            NSLog(@"resultPods:%@",_resultPods);
+        }
+        
+    }];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

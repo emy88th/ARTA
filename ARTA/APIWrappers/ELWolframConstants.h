@@ -23,4 +23,8 @@ extern NSString *kWolframResultsFormatParam;
 extern NSString *kWolframImageDatatype;
 extern NSString *kWolframPlaintextDatatype;
 
+#pragma mark - Notifications
+extern NSString *kWolframRequestInProgressNotification;
+extern NSString *kWolframRequestFinishedNotification;
+extern NSString *kWolframRequestFailedNotification;
 #endif
