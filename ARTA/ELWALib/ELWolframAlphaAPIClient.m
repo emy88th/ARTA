@@ -17,6 +17,7 @@
 
 + (ELWolframAlphaAPIClient *)sharedClient {
     static ELWolframAlphaAPIClient *_sharedClient = nil;
+    
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kWolframApiBaseURL]];
