@@ -11,6 +11,7 @@
 #import "ELWolframConstants.h"
 #import "DDXMLDocument.h"
 #import "ELWolframLocationDataModel.h"
+#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation ELWolframAlphaAPIClient
 
@@ -19,6 +20,7 @@
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kWolframApiBaseURL]];
+        [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     });
     
     return _sharedClient;
@@ -88,10 +90,10 @@
                       block (nil);
                   }
               }              
-    } 
+          } 
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               [[NSNotificationCenter defaultCenter] postNotificationName:kWolframRequestFailedNotification object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:error, @"Error", nil]];
-            
+              
               if (block) {
                   block (nil);
               }

@@ -30,6 +30,7 @@
 		E54C5F401583AA9C00ECB338 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F341583AA9C00ECB338 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E54C5F411583AA9C00ECB338 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F361583AA9C00ECB338 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E54C5F421583AA9C00ECB338 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E5B71BF2158D151C00CCFED2 /* ELWAUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B71BF1158D151C00CCFED2 /* ELWAUIManager.m */; };
 		E5ECAD5E1585202000128FB5 /* ELWolframAlphaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */; };
 		E5ECAD67158540AD00128FB5 /* ELWolframConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */; };
 		E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */; };
@@ -82,12 +83,14 @@
 		E54C5F361583AA9C00ECB338 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		E54C5F371583AA9C00ECB338 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ELWolframAlphaAPIClient.h; path = APIWrappers/ELWolframAlphaAPIClient.h; sourceTree = "<group>"; };
-		E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframAlphaAPIClient.m; path = APIWrappers/ELWolframAlphaAPIClient.m; sourceTree = "<group>"; };
-		E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ELWolframConstants.h; path = APIWrappers/ELWolframConstants.h; sourceTree = "<group>"; };
-		E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframConstants.m; path = APIWrappers/ELWolframConstants.m; sourceTree = "<group>"; };
-		E5ECAD6D158CD9DE00128FB5 /* ELWolframLocationDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframLocationDataModel.h; path = DataModels/ELWolframLocationDataModel.h; sourceTree = "<group>"; };
-		E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframLocationDataModel.m; path = DataModels/ELWolframLocationDataModel.m; sourceTree = "<group>"; };
+		E5B71BF0158D151C00CCFED2 /* ELWAUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWAUIManager.h; path = ELWALib/ELWAUIManager.h; sourceTree = "<group>"; };
+		E5B71BF1158D151C00CCFED2 /* ELWAUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWAUIManager.m; path = ELWALib/ELWAUIManager.m; sourceTree = "<group>"; };
+		E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframAlphaAPIClient.h; path = ELWALib/ELWolframAlphaAPIClient.h; sourceTree = "<group>"; };
+		E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframAlphaAPIClient.m; path = ELWALib/ELWolframAlphaAPIClient.m; sourceTree = "<group>"; };
+		E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ELWolframConstants.h; path = ELWALib/ELWolframConstants.h; sourceTree = "<group>"; };
+		E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframConstants.m; path = ELWALib/ELWolframConstants.m; sourceTree = "<group>"; };
+		E5ECAD6D158CD9DE00128FB5 /* ELWolframLocationDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframLocationDataModel.h; path = ELWALib/ELWolframLocationDataModel.h; sourceTree = "<group>"; };
+		E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframLocationDataModel.m; path = ELWALib/ELWolframLocationDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +156,7 @@
 			children = (
 				E54C5F231583AA9C00ECB338 /* AFNetworking */,
 				CF8C93751585D471004A5F61 /* KissXML */,
-				E54C5F431583AAA100ECB338 /* RequestWrappers */,
+				E54C5F431583AAA100ECB338 /* ELWALib */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -238,15 +241,25 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		E54C5F431583AAA100ECB338 /* RequestWrappers */ = {
+		E54C5F431583AAA100ECB338 /* ELWALib */ = {
 			isa = PBXGroup;
 			children = (
-				E5ECAD6515853D6600128FB5 /* WolframLocationAPIClient */,
+				E5B71BEF158D14F600CCFED2 /* UIManager */,
+				E5ECAD6515853D6600128FB5 /* ELWolframAlphaAPIClient */,
 			);
-			name = RequestWrappers;
+			name = ELWALib;
 			sourceTree = "<group>";
 		};
-		E5ECAD6515853D6600128FB5 /* WolframLocationAPIClient */ = {
+		E5B71BEF158D14F600CCFED2 /* UIManager */ = {
+			isa = PBXGroup;
+			children = (
+				E5B71BF0158D151C00CCFED2 /* ELWAUIManager.h */,
+				E5B71BF1158D151C00CCFED2 /* ELWAUIManager.m */,
+			);
+			name = UIManager;
+			sourceTree = "<group>";
+		};
+		E5ECAD6515853D6600128FB5 /* ELWolframAlphaAPIClient */ = {
 			isa = PBXGroup;
 			children = (
 				E5ECAD70158CD9E600128FB5 /* DataModels */,
@@ -255,7 +268,7 @@
 				E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */,
 				E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */,
 			);
-			name = WolframLocationAPIClient;
+			name = ELWolframAlphaAPIClient;
 			sourceTree = "<group>";
 		};
 		E5ECAD70158CD9E600128FB5 /* DataModels */ = {
@@ -350,6 +363,7 @@
 				CF8C93891585D471004A5F61 /* DDXMLNode.m in Sources */,
 				CF8C93901585D832004A5F61 /* AFKissXMLRequestOperation.m in Sources */,
 				E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */,
+				E5B71BF2158D151C00CCFED2 /* ELWAUIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
