@@ -11,6 +11,7 @@
 @interface ELWolframLocationDataModel : NSObject
 
 @property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *plaintext;
 @property (nonatomic, retain) NSString *imageUrlString;
 @property (nonatomic, assign) BOOL isInputInterpretation;
 

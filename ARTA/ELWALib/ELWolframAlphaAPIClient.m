@@ -44,7 +44,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:kWolframRequestInProgressNotification object:nil];
     
     // Prepare the request params
-    NSDictionary *paramDictionary = [NSDictionary dictionaryWithObjectsAndKeys:inputString, kWolframGeneralInputParam, kWolframApiID, kWolframApiIDParam, [NSString stringWithFormat:@"%@", kWolframImageDatatype], kWolframResultsFormatParam, nil];
+    NSDictionary *paramDictionary = [NSDictionary dictionaryWithObjectsAndKeys:inputString, kWolframGeneralInputParam, kWolframApiID, kWolframApiIDParam, [NSString stringWithFormat:@"%@,%@", kWolframPlaintextDatatype, kWolframImageDatatype], kWolframResultsFormatParam, nil];
     
     // Launch the request 
     [self getPath:kWolframGeneralQueryParam parameters:paramDictionary 
@@ -73,9 +73,15 @@
                       if ([podChildren count]) {
                           for (DDXMLNode *childNode in podChildren) {
                               NSError *subpodError = nil;
-                              NSArray *childInformationArray = [childNode nodesForXPath:@"./img/@src" error:&subpodError];
+                              NSArray *childInformationArray = [childNode nodesForXPath:@"./img/@src | ./plaintext" error:&subpodError];
                               
-                              [childInformationArray count] ? [dataModel setImageUrlString:[(DDXMLNode *)[childInformationArray objectAtIndex:0] stringValue]] : nil;
+                              for (DDXMLNode *informationNode in childInformationArray) {
+                                  if ([[informationNode stringValue] hasPrefix:@"http://"]) {
+                                      dataModel.imageUrlString = [informationNode stringValue];
+                                  } else {
+                                      dataModel.plaintext = [informationNode stringValue];
+                                  }
+                              }
                           }
                       }
                       [resultPods addObject:dataModel];
