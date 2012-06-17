@@ -31,6 +31,13 @@
 		E54C5F411583AA9C00ECB338 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F361583AA9C00ECB338 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E54C5F421583AA9C00ECB338 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E5B71BF2158D151C00CCFED2 /* ELWAUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B71BF1158D151C00CCFED2 /* ELWAUIManager.m */; };
+		E5B71BF5158E548700CCFED2 /* UIView-Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B71BF4158E548600CCFED2 /* UIView-Additions.m */; };
+		E5B71BFB158E6EA300CCFED2 /* ELMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B71BF9158E6EA300CCFED2 /* ELMainViewController.m */; };
+		E5B71BFC158E6EA300CCFED2 /* ELMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5B71BFA158E6EA300CCFED2 /* ELMainViewController.xib */; };
+		E5B71C00158E6F3000CCFED2 /* bgd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71BFE158E6F3000CCFED2 /* bgd.png */; };
+		E5B71C01158E6F3000CCFED2 /* bgd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71BFF158E6F3000CCFED2 /* bgd@2x.png */; };
+		E5B71C0C158E732D00CCFED2 /* result-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71C0A158E732D00CCFED2 /* result-grey.png */; };
+		E5B71C0D158E732D00CCFED2 /* result-grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71C0B158E732D00CCFED2 /* result-grey@2x.png */; };
 		E5ECAD5E1585202000128FB5 /* ELWolframAlphaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */; };
 		E5ECAD67158540AD00128FB5 /* ELWolframConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */; };
 		E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */; };
@@ -85,6 +92,15 @@
 		E54C5F381583AA9C00ECB338 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		E5B71BF0158D151C00CCFED2 /* ELWAUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWAUIManager.h; path = ELWALib/ELWAUIManager.h; sourceTree = "<group>"; };
 		E5B71BF1158D151C00CCFED2 /* ELWAUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWAUIManager.m; path = ELWALib/ELWAUIManager.m; sourceTree = "<group>"; };
+		E5B71BF3158E548600CCFED2 /* UIView-Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView-Additions.h"; path = "ELWALib/UIView-Additions.h"; sourceTree = "<group>"; };
+		E5B71BF4158E548600CCFED2 /* UIView-Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView-Additions.m"; path = "ELWALib/UIView-Additions.m"; sourceTree = "<group>"; };
+		E5B71BF8158E6EA300CCFED2 /* ELMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELMainViewController.h; path = ViewControllers/ELMainViewController.h; sourceTree = "<group>"; };
+		E5B71BF9158E6EA300CCFED2 /* ELMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELMainViewController.m; path = ViewControllers/ELMainViewController.m; sourceTree = "<group>"; };
+		E5B71BFA158E6EA300CCFED2 /* ELMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ELMainViewController.xib; path = ViewControllers/ELMainViewController.xib; sourceTree = "<group>"; };
+		E5B71BFE158E6F3000CCFED2 /* bgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgd.png; sourceTree = "<group>"; };
+		E5B71BFF158E6F3000CCFED2 /* bgd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgd@2x.png"; sourceTree = "<group>"; };
+		E5B71C0A158E732D00CCFED2 /* result-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "result-grey.png"; sourceTree = "<group>"; };
+		E5B71C0B158E732D00CCFED2 /* result-grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "result-grey@2x.png"; sourceTree = "<group>"; };
 		E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframAlphaAPIClient.h; path = ELWALib/ELWolframAlphaAPIClient.h; sourceTree = "<group>"; };
 		E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframAlphaAPIClient.m; path = ELWALib/ELWolframAlphaAPIClient.m; sourceTree = "<group>"; };
 		E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ELWolframConstants.h; path = ELWALib/ELWolframConstants.h; sourceTree = "<group>"; };
@@ -193,8 +209,10 @@
 			isa = PBXGroup;
 			children = (
 				CF8C938B1585D481004A5F61 /* Utilities */,
+				E5B71BF7158E6E6800CCFED2 /* ViewControllers */,
 				E54C5F1B1583A69B00ECB338 /* ELAppDelegate.h */,
 				E54C5F1C1583A69B00ECB338 /* ELAppDelegate.m */,
+				E5B71BFD158E6F2F00CCFED2 /* Assets */,
 				E54C5F131583A69B00ECB338 /* Supporting Files */,
 			);
 			path = ARTA;
@@ -246,6 +264,7 @@
 			children = (
 				E5B71BEF158D14F600CCFED2 /* UIManager */,
 				E5ECAD6515853D6600128FB5 /* ELWolframAlphaAPIClient */,
+				E5B71BF6158E548C00CCFED2 /* Categories */,
 			);
 			name = ELWALib;
 			sourceTree = "<group>";
@@ -257,6 +276,36 @@
 				E5B71BF1158D151C00CCFED2 /* ELWAUIManager.m */,
 			);
 			name = UIManager;
+			sourceTree = "<group>";
+		};
+		E5B71BF6158E548C00CCFED2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E5B71BF3158E548600CCFED2 /* UIView-Additions.h */,
+				E5B71BF4158E548600CCFED2 /* UIView-Additions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		E5B71BF7158E6E6800CCFED2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5B71BF8158E6EA300CCFED2 /* ELMainViewController.h */,
+				E5B71BF9158E6EA300CCFED2 /* ELMainViewController.m */,
+				E5B71BFA158E6EA300CCFED2 /* ELMainViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E5B71BFD158E6F2F00CCFED2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E5B71C0A158E732D00CCFED2 /* result-grey.png */,
+				E5B71C0B158E732D00CCFED2 /* result-grey@2x.png */,
+				E5B71BFE158E6F3000CCFED2 /* bgd.png */,
+				E5B71BFF158E6F3000CCFED2 /* bgd@2x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		E5ECAD6515853D6600128FB5 /* ELWolframAlphaAPIClient */ = {
@@ -332,6 +381,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54C5F171583A69B00ECB338 /* InfoPlist.strings in Resources */,
+				E5B71BFC158E6EA300CCFED2 /* ELMainViewController.xib in Resources */,
+				E5B71C00158E6F3000CCFED2 /* bgd.png in Resources */,
+				E5B71C01158E6F3000CCFED2 /* bgd@2x.png in Resources */,
+				E5B71C0C158E732D00CCFED2 /* result-grey.png in Resources */,
+				E5B71C0D158E732D00CCFED2 /* result-grey@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +418,8 @@
 				CF8C93901585D832004A5F61 /* AFKissXMLRequestOperation.m in Sources */,
 				E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */,
 				E5B71BF2158D151C00CCFED2 /* ELWAUIManager.m in Sources */,
+				E5B71BF5158E548700CCFED2 /* UIView-Additions.m in Sources */,
+				E5B71BFB158E6EA300CCFED2 /* ELMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,11 +73,15 @@
                       if ([podChildren count]) {
                           for (DDXMLNode *childNode in podChildren) {
                               NSError *subpodError = nil;
-                              NSArray *childInformationArray = [childNode nodesForXPath:@"./img/@src | ./plaintext" error:&subpodError];
+                              NSArray *childInformationArray = [childNode nodesForXPath:@"./img/@src | ./plaintext | ./img/@width | ./img/@height" error:&subpodError];
                               
                               for (DDXMLNode *informationNode in childInformationArray) {
                                   if ([[informationNode stringValue] hasPrefix:@"http://"]) {
                                       dataModel.imageUrlString = [informationNode stringValue];
+                                  } else if ([[informationNode description] hasPrefix:@"width"]) {
+                                      dataModel.imageWidth = [[informationNode stringValue] intValue];
+                                  } else if ([[informationNode description] hasPrefix:@"height"]) {
+                                      dataModel.imageHeight = [[informationNode stringValue] intValue];
                                   } else {
                                       dataModel.plaintext = [informationNode stringValue];
                                   }

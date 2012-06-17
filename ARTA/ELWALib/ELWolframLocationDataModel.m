@@ -10,7 +10,7 @@
 
 @implementation ELWolframLocationDataModel
 
-@synthesize title, plaintext, imageUrlString, isInputInterpretation;
+@synthesize title, plaintext, imageUrlString, imageWidth, imageHeight, isInputInterpretation;
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"--- Title:%@, Plaintext:%@, ImageURL:%@, isInputInterpretation:%@ ---", title, plaintext, imageUrlString, isInputInterpretation ? @"YES" : @"NO"];

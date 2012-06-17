@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ELWolframLocationDataModel.h"
 
 @interface ELWAUIManager : NSObject
+
+#pragma mark - UIFactory
+
+- (UIView *)createResponseViewForPod:(ELWolframLocationDataModel *)dataModel;
 
 @end
