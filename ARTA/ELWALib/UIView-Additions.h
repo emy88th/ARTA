@@ -10,4 +10,6 @@
 
 @interface UIView(ELAdditions)
 
+- (void)moveUnderView:(UIView*)topView withSpaceBetween:(float)spaceBetween;
+
 @end

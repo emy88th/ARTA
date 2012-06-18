@@ -7,7 +7,7 @@
 //
 
 #import "ELAppDelegate.h"
-#import "ELWolframAlphaAPIClient.h"
+#import "ELMainViewController.h"
 
 @implementation ELAppDelegate
 
@@ -16,17 +16,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    [[ELWolframAlphaAPIClient sharedClient] informationPodsForInput:@"Iasi" withBlock:^(NSArray *resultPods) {
-        if (resultPods) {
-            NSArray *_resultPods = resultPods;
-            
-            NSLog(@"resultPods:%@",_resultPods);
-        }
-        
-    }];
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    ELMainViewController *mainViewController = [[ELMainViewController alloc] initWithNibName:NSStringFromClass([ELMainViewController class]) bundle:nil];
+    self.window.rootViewController = mainViewController;
+    
+    self.window.backgroundColor = [UIColor clearColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

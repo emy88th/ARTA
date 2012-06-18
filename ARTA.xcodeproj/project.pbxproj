@@ -38,6 +38,7 @@
 		E5B71C01158E6F3000CCFED2 /* bgd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71BFF158E6F3000CCFED2 /* bgd@2x.png */; };
 		E5B71C0C158E732D00CCFED2 /* result-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71C0A158E732D00CCFED2 /* result-grey.png */; };
 		E5B71C0D158E732D00CCFED2 /* result-grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B71C0B158E732D00CCFED2 /* result-grey@2x.png */; };
+		E5B71C10158FB3D100CCFED2 /* UILabel-Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B71C0F158FB3D100CCFED2 /* UILabel-Additions.m */; };
 		E5ECAD5E1585202000128FB5 /* ELWolframAlphaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */; };
 		E5ECAD67158540AD00128FB5 /* ELWolframConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD66158540AD00128FB5 /* ELWolframConstants.m */; };
 		E5ECAD6F158CD9DF00128FB5 /* ELWolframLocationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ECAD6E158CD9DF00128FB5 /* ELWolframLocationDataModel.m */; };
@@ -101,6 +102,8 @@
 		E5B71BFF158E6F3000CCFED2 /* bgd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgd@2x.png"; sourceTree = "<group>"; };
 		E5B71C0A158E732D00CCFED2 /* result-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "result-grey.png"; sourceTree = "<group>"; };
 		E5B71C0B158E732D00CCFED2 /* result-grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "result-grey@2x.png"; sourceTree = "<group>"; };
+		E5B71C0E158FB3D100CCFED2 /* UILabel-Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel-Additions.h"; path = "ELWALib/UILabel-Additions.h"; sourceTree = "<group>"; };
+		E5B71C0F158FB3D100CCFED2 /* UILabel-Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel-Additions.m"; path = "ELWALib/UILabel-Additions.m"; sourceTree = "<group>"; };
 		E5ECAD5C1585202000128FB5 /* ELWolframAlphaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELWolframAlphaAPIClient.h; path = ELWALib/ELWolframAlphaAPIClient.h; sourceTree = "<group>"; };
 		E5ECAD5D1585202000128FB5 /* ELWolframAlphaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELWolframAlphaAPIClient.m; path = ELWALib/ELWolframAlphaAPIClient.m; sourceTree = "<group>"; };
 		E5ECAD6315853D5700128FB5 /* ELWolframConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ELWolframConstants.h; path = ELWALib/ELWolframConstants.h; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 			children = (
 				E5B71BF3158E548600CCFED2 /* UIView-Additions.h */,
 				E5B71BF4158E548600CCFED2 /* UIView-Additions.m */,
+				E5B71C0E158FB3D100CCFED2 /* UILabel-Additions.h */,
+				E5B71C0F158FB3D100CCFED2 /* UILabel-Additions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				E5B71BF2158D151C00CCFED2 /* ELWAUIManager.m in Sources */,
 				E5B71BF5158E548700CCFED2 /* UIView-Additions.m in Sources */,
 				E5B71BFB158E6EA300CCFED2 /* ELMainViewController.m in Sources */,
+				E5B71C10158FB3D100CCFED2 /* UILabel-Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

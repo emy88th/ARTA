@@ -10,7 +10,7 @@
 
 @implementation UIView(ELAdditions)
 
-- (void) mooveUnderView:(UIView*)topView withSpaceBetween:(float)spaceBetween {
+- (void)moveUnderView:(UIView*)topView withSpaceBetween:(float)spaceBetween {
     CGRect newFrame = self.frame;
     newFrame.origin = topView.frame.origin;
     

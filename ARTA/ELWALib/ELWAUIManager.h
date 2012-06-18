@@ -11,6 +11,8 @@
 
 @interface ELWAUIManager : NSObject
 
++ (ELWAUIManager *)sharedManager;
+
 #pragma mark - UIFactory
 
 - (UIView *)createResponseViewForPod:(ELWolframLocationDataModel *)dataModel;

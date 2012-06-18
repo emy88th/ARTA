@@ -7,10 +7,8 @@
 //
 
 #import "ELMainViewController.h"
-
-@interface ELMainViewController ()
-
-@end
+#import "ELWolframAlphaAPIClient.h"
+#import "ELWAUIManager.h"
 
 @implementation ELMainViewController
 
@@ -26,7 +24,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [[ELWolframAlphaAPIClient sharedClient] informationPodsForInput:@"Iasi" withBlock:^(NSArray *resultPods) {
+        if (resultPods) {
+            NSArray *_resultPods = resultPods;
+            
+            NSLog(@"resultPods:%@",_resultPods);
+            
+            [self.view addSubview:[[ELWAUIManager sharedManager] createResponseViewForPod:[_resultPods objectAtIndex:0]]];
+        }        
+    }];
 }
 
 - (void)viewDidUnload

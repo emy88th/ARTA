@@ -9,27 +9,59 @@
 #import "ELWAUIManager.h"
 #import "UIView-Additions.h"
 #import "UIImageView+AFNetworking.h"
+#import "UILabel-Additions.h"
 
 @implementation ELWAUIManager
 
++ (ELWAUIManager *)sharedManager {
+    static ELWAUIManager *_sharedManager = nil;
+    
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _sharedManager = [[self alloc] init];
+    });
+    
+    return _sharedManager;
+}
+
 #pragma mark - UIFactory
 
-
 - (UIView *)createResponseViewForPod:(ELWolframLocationDataModel *)dataModel {
-    /*UIImage *containerBackground = [[UIImage imageNamed:@"result-grey.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(8, 11, 8, 11)];
+    UIImage *containerBackground = [[UIImage imageNamed:@"result-grey.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 30, 10)];
+    UIImageView *containerBackgroundImageView = [[UIImageView alloc] initWithImage:containerBackground];
+    containerBackgroundImageView.frame = CGRectMake(0, 0, containerBackground.size.width, 0);
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containerBackground.size.width + 5, 0)];
+    containerView.backgroundColor = [UIColor clearColor];
+    [containerView addSubview:containerBackgroundImageView];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, containerBackground.size.width - 10, 0)];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textAlignment = UITextAlignmentLeft;
     titleLabel.lineBreakMode = UILineBreakModeWordWrap;
-    titleLabel.textColor = [UIColor colorWithRed:64 green:64 blue:64 alpha:1.0];
+    titleLabel.textColor = [UIColor darkGrayColor];
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14];
     titleLabel.text = dataModel.title;
+    [titleLabel wrapLabelBasedOnWidth];
     
-    UIImageView *responseImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, dataModel.imageWidth, dataModel.imageHeight)];
-    [responseImageView setImageWithURL:[NSURL URLWithString:dataModel.imageUrlString]];*/
+    int spaceBetweenTitleAndResult = 5;
+    UIImageView *responseImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 0, dataModel.imageWidth, dataModel.imageHeight)];
+    responseImageView.backgroundColor = [UIColor clearColor];
+    [responseImageView setImageWithURL:[NSURL URLWithString:dataModel.imageUrlString]];
+    [responseImageView moveUnderView:titleLabel withSpaceBetween:spaceBetweenTitleAndResult];
     
-    return nil;
+    CGRect containerBackgroundRect = containerBackgroundImageView.frame;
+    containerBackgroundRect.size.height = [titleLabel suggestedHeightForLabelText] + dataModel.imageHeight + spaceBetweenTitleAndResult + 25;
+    containerBackgroundImageView.frame = containerBackgroundRect;
+    
+    CGRect containerViewRect = containerView.frame;
+    containerViewRect.size.height = containerBackgroundRect.size.height;
+    containerView.frame = containerViewRect;
+    
+    [containerView addSubview:titleLabel];
+    [containerView addSubview:responseImageView];
+    
+    return containerView;
 }
 
 
