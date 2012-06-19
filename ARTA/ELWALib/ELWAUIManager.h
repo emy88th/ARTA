@@ -16,5 +16,6 @@
 #pragma mark - UIFactory
 
 - (UIView *)createResponseViewForPod:(ELWolframLocationDataModel *)dataModel;
+- (UIScrollView *)createResponseScrollViewForPodsArray:(NSArray *)podsArray withSize:(CGSize)scrollViewSize spaceBetweenPods:(int)spaceBetweenPods;
 
 @end

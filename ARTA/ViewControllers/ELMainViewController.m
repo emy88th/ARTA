@@ -29,9 +29,7 @@
         if (resultPods) {
             NSArray *_resultPods = resultPods;
             
-            NSLog(@"resultPods:%@",_resultPods);
-            
-            [self.view addSubview:[[ELWAUIManager sharedManager] createResponseViewForPod:[_resultPods objectAtIndex:0]]];
+            [self.view addSubview:[[ELWAUIManager sharedManager] createResponseScrollViewForPodsArray:_resultPods withSize:CGSizeMake(320, 480) spaceBetweenPods:30]];
         }        
     }];
 }
