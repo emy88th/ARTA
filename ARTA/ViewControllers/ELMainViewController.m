@@ -16,7 +16,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"ARTA";
     }
     return self;
 }
@@ -29,7 +29,7 @@
         if (resultPods) {
             NSArray *_resultPods = resultPods;
             
-            [self.view addSubview:[[ELWAUIManager sharedManager] createResponseScrollViewForPodsArray:_resultPods withSize:CGSizeMake(320, 480) spaceBetweenPods:30]];
+            [self.view addSubview:[[ELWAUIManager sharedManager] createResponseScrollViewForPodsArray:_resultPods withSize:CGSizeMake(320, 480 - 44) spaceBetweenPods:30]];
         }        
     }];
 }

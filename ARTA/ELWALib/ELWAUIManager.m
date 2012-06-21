@@ -30,13 +30,13 @@
 - (UIView *)createResponseViewForPod:(ELWolframLocationDataModel *)dataModel {
     UIImage *containerBackground = [[UIImage imageNamed:@"result-grey.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 30, 10)];
     UIImageView *containerBackgroundImageView = [[UIImageView alloc] initWithImage:containerBackground];
-    containerBackgroundImageView.frame = CGRectMake(0, 0, containerBackground.size.width, 0);
+    containerBackgroundImageView.frame = CGRectMake(15, 0, containerBackground.size.width, 0);
     
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containerBackground.size.width, 0)];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(containerBackgroundImageView.frame.origin.x, 0, containerBackground.size.width, 0)];
     containerView.backgroundColor = [UIColor clearColor];
     [containerView addSubview:containerBackgroundImageView];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, containerBackground.size.width - 10, 0)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(containerBackgroundImageView.frame.origin.x + 15, 0, containerBackground.size.width - 10, 0)];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textAlignment = UITextAlignmentLeft;
     titleLabel.lineBreakMode = UILineBreakModeWordWrap;
@@ -46,7 +46,7 @@
     [titleLabel wrapLabelBasedOnWidth];
     
     int spaceBetweenTitleAndResult = 5;
-    UIImageView *responseImageView = [[UIImageView alloc] initWithFrame:CGRectMake(6, 0, dataModel.imageWidth, dataModel.imageHeight)];
+    UIImageView *responseImageView = [[UIImageView alloc] initWithFrame:CGRectMake(containerBackgroundImageView.frame.origin.x + 6, 0, dataModel.imageWidth, dataModel.imageHeight)];
     responseImageView.backgroundColor = [UIColor clearColor];
     responseImageView.contentMode = UIViewContentModeScaleAspectFit;
     
@@ -54,7 +54,7 @@
     UIScrollView *scrollableContainer = nil;
     
     if (dataModel.imageWidth > containerBackground.size.width) {
-        scrollableContainer = [[UIScrollView alloc] initWithFrame:CGRectMake(6, 0, containerBackground.size.width - 7, dataModel.imageHeight + 7)];
+        scrollableContainer = [[UIScrollView alloc] initWithFrame:CGRectMake(containerBackgroundImageView.frame.origin.x + 6, 0, containerBackground.size.width - 7, dataModel.imageHeight + 7)];
         [scrollableContainer setContentSize:CGSizeMake(dataModel.imageWidth, dataModel.imageHeight)];
         
         CGRect responseImageViewRect = responseImageView.frame;
@@ -99,9 +99,12 @@
     for ( ELWolframLocationDataModel *dataModel in podsArray) {
         if (!scrollContentSizeYOffset) {
             tempResponseView = [self createResponseViewForPod:dataModel];
+            CGRect tempRect = tempResponseView.frame;
+            tempRect.origin.y = 10;
+            tempResponseView.frame = tempRect;
             [containerScrollView addSubview:tempResponseView];
             
-            scrollContentSizeYOffset += tempResponseView.frame.size.height;
+            scrollContentSizeYOffset += tempResponseView.frame.size.height + tempRect.origin.y;
             continue;
         }
         
@@ -110,7 +113,25 @@
         scrollContentSizeYOffset += responseViewForPod.frame.size.height + spaceBetweenPods;
         tempResponseView = responseViewForPod;
         [containerScrollView addSubview:responseViewForPod];
+        
+        //Adding the bulets
+        UIImage *bulletImage = [UIImage imageNamed:@"bullet.png"];
+        UIImageView *bulletImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bullet.png"]];
+        bulletImageView.frame = CGRectMake(5, responseViewForPod.frame.origin.y + responseViewForPod.frame.size.height / 2 - bulletImage.size.height, bulletImage.size.width, bulletImage.size.height);
+        [containerScrollView addSubview:bulletImageView];
     }
+    
+    // Adding the timeline image
+    UIImage *timeLineImage = [[UIImage imageNamed:@"line.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 0, 1, 0)];
+    UIImageView *timeLineImageView = [[UIImageView alloc] initWithImage:timeLineImage];
+    timeLineImageView.contentMode = UIViewContentModeScaleToFill;
+    CGRect timeLineRect = timeLineImageView.frame;
+    timeLineRect.origin.x = 10;
+    timeLineRect.origin.y = - 200;
+    timeLineRect.size.height = scrollContentSizeYOffset + 200 * 2;
+    timeLineImageView.frame = timeLineRect;
+    
+    [containerScrollView addSubview:timeLineImageView];
     
     [containerScrollView setContentSize:CGSizeMake(containerScrollView.frame.size.width, scrollContentSizeYOffset + spaceBetweenPods)];
     

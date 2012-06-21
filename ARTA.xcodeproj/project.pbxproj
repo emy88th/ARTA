@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF27F90F1592FC3B002A8184 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = CF27F9091592FC3B002A8184 /* bullet.png */; };
+		CF27F9101592FC3B002A8184 /* bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF27F90A1592FC3B002A8184 /* bullet@2x.png */; };
+		CF27F9111592FC3B002A8184 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = CF27F90B1592FC3B002A8184 /* line.png */; };
+		CF27F9121592FC3B002A8184 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF27F90C1592FC3B002A8184 /* line@2x.png */; };
+		CF27F9131592FC3B002A8184 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF27F90D1592FC3B002A8184 /* navbar.png */; };
+		CF27F9141592FC3B002A8184 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF27F90E1592FC3B002A8184 /* navbar@2x.png */; };
 		CF8C93851585D471004A5F61 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8C93781585D471004A5F61 /* DDXMLElementAdditions.m */; };
 		CF8C93861585D471004A5F61 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8C937B1585D471004A5F61 /* NSString+DDXML.m */; };
 		CF8C93871585D471004A5F61 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8C937E1585D471004A5F61 /* DDXMLDocument.m */; };
@@ -46,6 +52,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF27F9091592FC3B002A8184 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		CF27F90A1592FC3B002A8184 /* bullet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet@2x.png"; sourceTree = "<group>"; };
+		CF27F90B1592FC3B002A8184 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		CF27F90C1592FC3B002A8184 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		CF27F90D1592FC3B002A8184 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		CF27F90E1592FC3B002A8184 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		CF8C93771585D471004A5F61 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
 		CF8C93781585D471004A5F61 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
 		CF8C937A1585D471004A5F61 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
@@ -310,6 +322,12 @@
 		E5B71BFD158E6F2F00CCFED2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				CF27F9091592FC3B002A8184 /* bullet.png */,
+				CF27F90A1592FC3B002A8184 /* bullet@2x.png */,
+				CF27F90B1592FC3B002A8184 /* line.png */,
+				CF27F90C1592FC3B002A8184 /* line@2x.png */,
+				CF27F90D1592FC3B002A8184 /* navbar.png */,
+				CF27F90E1592FC3B002A8184 /* navbar@2x.png */,
 				E5B71C0A158E732D00CCFED2 /* result-grey.png */,
 				E5B71C0B158E732D00CCFED2 /* result-grey@2x.png */,
 				E5B71BFE158E6F3000CCFED2 /* bgd.png */,
@@ -396,6 +414,12 @@
 				E5B71C01158E6F3000CCFED2 /* bgd@2x.png in Resources */,
 				E5B71C0C158E732D00CCFED2 /* result-grey.png in Resources */,
 				E5B71C0D158E732D00CCFED2 /* result-grey@2x.png in Resources */,
+				CF27F90F1592FC3B002A8184 /* bullet.png in Resources */,
+				CF27F9101592FC3B002A8184 /* bullet@2x.png in Resources */,
+				CF27F9111592FC3B002A8184 /* line.png in Resources */,
+				CF27F9121592FC3B002A8184 /* line@2x.png in Resources */,
+				CF27F9131592FC3B002A8184 /* navbar.png in Resources */,
+				CF27F9141592FC3B002A8184 /* navbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +482,7 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Emanuel Lupu-Marinei (JY6342FR8G)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -475,6 +500,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lxml2";
+				PROVISIONING_PROFILE = "F5827F5C-8240-4128-ABF6-E21B1662008A";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 			};
@@ -489,6 +515,7 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Emanuel Lupu-Marinei (JY6342FR8G)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_THUMB_SUPPORT = NO;
@@ -500,6 +527,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
+				PROVISIONING_PROFILE = "F5827F5C-8240-4128-ABF6-E21B1662008A";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				VALIDATE_PRODUCT = YES;

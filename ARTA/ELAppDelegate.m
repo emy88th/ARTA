@@ -17,8 +17,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+    
     ELMainViewController *mainViewController = [[ELMainViewController alloc] initWithNibName:NSStringFromClass([ELMainViewController class]) bundle:nil];
-    self.window.rootViewController = mainViewController;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    [navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    self.window.rootViewController = navigationController;
     
     self.window.backgroundColor = [UIColor clearColor];
     [self.window makeKeyAndVisible];
