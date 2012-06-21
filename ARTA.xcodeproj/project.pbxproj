@@ -482,7 +482,7 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Emanuel Lupu-Marinei (JY6342FR8G)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -500,7 +500,6 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lxml2";
-				PROVISIONING_PROFILE = "F5827F5C-8240-4128-ABF6-E21B1662008A";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 			};
@@ -515,7 +514,7 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Emanuel Lupu-Marinei (JY6342FR8G)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_THUMB_SUPPORT = NO;
@@ -527,7 +526,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
-				PROVISIONING_PROFILE = "F5827F5C-8240-4128-ABF6-E21B1662008A";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				VALIDATE_PRODUCT = YES;
