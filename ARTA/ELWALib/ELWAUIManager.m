@@ -127,8 +127,8 @@
     timeLineImageView.contentMode = UIViewContentModeScaleToFill;
     CGRect timeLineRect = timeLineImageView.frame;
     timeLineRect.origin.x = 10;
-    timeLineRect.origin.y = - 200;
-    timeLineRect.size.height = scrollContentSizeYOffset + 200 * 2;
+    timeLineRect.origin.y = - 400;
+    timeLineRect.size.height = scrollContentSizeYOffset + 400 * 2;
     timeLineImageView.frame = timeLineRect;
     
     [containerScrollView addSubview:timeLineImageView];
